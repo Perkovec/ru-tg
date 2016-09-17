@@ -1,0 +1,19 @@
+ui: mocha-bdd
+browsers:
+  - name: chrome
+    version: latest
+  - name: ie
+    version: latest
+  - name: firefox
+    version: latest
+  - name: safari
+    version: latest
+  - name: android
+    version: latest
+  - name: iphone
+    version: latest
+  - name: ipad
+    version: latest
+server: ./test/net/http-server.js
+browserify:
+  - transform: requirish
