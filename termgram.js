@@ -24,7 +24,7 @@ var logger = getLogger('main');
 
 // import other dependencies
 require('colors');
-require('telegram.link')(getSignature());
+require('./telegram.link')(getSignature());
 var ui = require('./lib/user-interface');
 var i18n = require('./i18n/en-US');
 var signUp = require('./lib/use-case/sign-up');

@@ -10,10 +10,10 @@ module.exports = exports = RequestDHParams;
 require('requirish')._(module);
 var flow = require('get-flow');
 var logger = require('get-log')('auth.RequestDHParams');
-var mtproto = require('lib/mtproto');
-var utility = require('lib/utility');
-var security = require('lib/security');
-var tl = require('telegram-tl-node');
+var mtproto = require('../mtproto');
+var utility = require('../utility');
+var security = require('../security');
+var tl = require('../../../telegram-tl-node');
 
 
 // Requires a callback function and the rpc channel

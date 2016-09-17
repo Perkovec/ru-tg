@@ -15,7 +15,7 @@ require('requirish')._(module);
 var BigInteger = require('jsbn');
 var CryptoJS = require('node-cryptojs-aes').CryptoJS;
 var getLogger = require('get-log');
-var utility = require('lib/utility');
+var utility = require('../utility');
 
 // RSA encrypt function, requires:
 //  - publicKey

@@ -7,8 +7,8 @@
 // ***
 
 // Dependencies:
-var tl = require('telegram-tl-node');
-var mt = require('telegram-mt-node');
+var tl = require('../../telegram-tl-node');
+var mt = require('../../telegram-mt-node');
 var api = require('./api');
 var utility = require('./utility');
 var SequenceNumber = mt.SequenceNumber;

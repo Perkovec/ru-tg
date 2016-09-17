@@ -4,7 +4,7 @@
 //     http://telegram.link
 
 // Import dependencies.
-var tl = require('telegram-tl-node');
+var tl = require('../../telegram-tl-node');
 
 // API TL schema as provided by Telegram.
 var apiTlSchema = require('./api-tlschema.json');

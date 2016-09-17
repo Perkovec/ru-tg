@@ -8,9 +8,9 @@
 // This class represents the Authentication Key
 
 require('requirish')._(module);
-var utility = require('lib/utility');
-var security = require('lib/security');
-var tl = require('telegram-tl-node');
+var utility = require('../utility');
+var security = require('../security');
+var tl = require('../../../telegram-tl-node');
 
 function AuthKey(id, value) {
     this.id = id;

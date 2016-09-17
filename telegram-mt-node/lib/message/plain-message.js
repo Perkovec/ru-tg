@@ -10,8 +10,8 @@
 
 // Import dependencies
 require('requirish')._(module);
-var utility = require('lib/utility');
-var tl = require('telegram-tl-node');
+var utility = require('../utility');
+var tl = require('../../../telegram-tl-node');
 var logger = require('get-log')('message.PlainMessage');
 
 // To get an instance for `serialization`:

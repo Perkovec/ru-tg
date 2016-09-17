@@ -12,7 +12,7 @@
 
 // Import dependencies
 require('requirish')._(module);
-var message = require('lib/message');
+var message = require('../message');
 var logger = require('get-log')('net.RpcChannel');
 
 

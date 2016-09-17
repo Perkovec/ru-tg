@@ -10,11 +10,11 @@
 
 // Import dependencies
 require('requirish')._(module);
-var RpcChannel = require('lib/net').RpcChannel;
-var message = require('lib/message');
-var mtproto = require('lib/mtproto');
+var RpcChannel = require('../net').RpcChannel;
+var message = require('../message');
+var mtproto = require('../mtproto');
 var zlib = require('zlib');
-var tl = require('telegram-tl-node');
+var tl = require('../../../telegram-tl-node');
 var logger = require('get-log')('net.EncryptedRpcChannel');
 
 // EncryptedRpcChannel extends RpcChannel

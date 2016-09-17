@@ -10,10 +10,10 @@
 // Import dependencies
 require('requirish')._(module);
 var util = require('util');
-var mtproto = require('lib/mtproto');
-var utility = require('lib/utility');
-var security = require('lib/security');
-var tl = require('telegram-tl-node');
+var mtproto = require('../mtproto');
+var utility = require('../utility');
+var security = require('../security');
+var tl = require('../../../telegram-tl-node');
 var logger = require('get-log')('message.EncryptedMessage');
 
 EncryptedMessage.InnerMessage = new tl.TypeBuilder.buildType('mtproto.type', {
