@@ -38,12 +38,12 @@ userData.setBaseFolder(userHome);
 
 // begin
 function main() {
-    var users = userData.retrieveUsernameList();
+    const userLoginned = userData.isLoggin();
     console.log(i18n.welcome);
     ui.spacer();
 
     function doSignUp() {
-        signUp(users).then(function (res) {
+        signUp().then(function (res) {
             logger.info('signUp res: %s', res);
             home();
         }, function (error) {
@@ -53,11 +53,11 @@ function main() {
     }
 
     // if no users
-    if (users.length == 0) {
-        logger.info('User list is empty, sign up a new user.');
+    if (!userLoginned) {
+        logger.info('Sign up a new user.');
         doSignUp();
     } else {
-        signIn(users).then(function (res) {
+        signIn().then(function (res) {
             logger.info('signIn res:', res);
             home();
         }, function (error) {
