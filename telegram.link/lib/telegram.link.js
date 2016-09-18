@@ -24,11 +24,11 @@ require('colors');
 var printed = false;
 module.exports = exports = function (signature) {
     if (!printed) {
-        console.log('\n' + (signature || require('./static').signature.cyan));
-        var caption = signature ?
+        console.log((signature || require('./static').signature.cyan));
+        /*var caption = signature ?
             'powered by telegram.link' :
             ('v.' + require('../package.json').version);
-        console.log(caption.gray + '\n');
+        console.log(caption.gray + '\n');*/
         printed = true;
     }
     return module.exports;

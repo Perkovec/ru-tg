@@ -5,7 +5,7 @@
 
 module.exports = require('./mark-down')
 ({
-    "welcome": "Welcome to **TERMGRAM**, a terminal client to connect with _Telegram_.",
+    "welcome": "Welcome to **TERMGRAM**.",
     "signUp": {
         "info": "To protect your Telegram identity you must create a local user/password,\n" +
         "**Termgram** will use your password to encrypt your authorization data saved locally.\n" +

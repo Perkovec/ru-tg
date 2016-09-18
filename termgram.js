@@ -3,24 +3,20 @@
 //     Released under the MIT License
 //     http://termgram.me
 
-// clear the term
-clearTerminal();
-
 // setup the fs
-var fs = require('fs');
-var userHome = (process.env.HOME || process.env.USERPROFILE) + '/.termgram';
-var logFolder = userHome + '/log';
+const fs = require('fs');
+const userHome = (process.env.HOME || process.env.USERPROFILE) + '/.termgram';
+const logFolder = userHome + '/log';
 try {
-    fs.mkdirSync(userHome, '0770');
-    fs.mkdirSync(logFolder, '0770');
-} catch (e) {
-}
+  fs.mkdirSync(userHome, '0770');
+  fs.mkdirSync(logFolder, '0770');
+} catch (e) {}
 
 // setup the logger
 process.env.LOGGER_FILE = logFolder + '/termgram';
-var getLogger = require('get-log');
+const getLogger = require('get-log');
 getLogger.PROJECT_NAME = 'termgram';
-var logger = getLogger('main');
+const logger = getLogger('main');
 
 // import other dependencies
 require('colors');
@@ -39,14 +35,13 @@ userData.setBaseFolder(userHome);
 // begin
 function main() {
     const userLoginned = userData.isLoggin();
-    console.log(i18n.welcome);
-    ui.spacer();
+    console.log(i18n.welcome);  
 
     function doSignUp() {
-        signUp().then(function (res) {
+        signUp().then(res => {
             logger.info('signUp res: %s', res);
             home();
-        }, function (error) {
+        }, error => {
             console.log('signUp error: ', error.stack);
             shutdown();
         });
@@ -57,10 +52,10 @@ function main() {
         logger.info('Sign up a new user.');
         doSignUp();
     } else {
-        signIn().then(function (res) {
+        signIn().then(res => {
             logger.info('signIn res:', res);
             home();
-        }, function (error) {
+        }, error => {
             if (error) {
                 console.log('signIn error: ', error.stack);
                 shutdown();
@@ -69,8 +64,8 @@ function main() {
             }
         });
     }
-    ui.events.on(ui.EVENT.EXIT, function () {
-        ui.askConfirmationInput(i18n.exit, true).then(shutdown, function () {
+    ui.events.on(ui.EVENT.EXIT, () => {
+        ui.askConfirmationInput(i18n.exit, true).then(shutdown, () => {
             console.log('nothing to do, again...')
         });
     });
@@ -79,15 +74,13 @@ function main() {
 // userHome page
 function home() {
     var updates = Updates.getInstance();
-    updates.start().then(function() {
-        ui.spacer();
-        selectChat().then(function (peer) {
+    updates.start().then(() => {
+        selectChat().then(peer => {
             if (peer) {
-                ui.spacer();
-                chat(peer).then(function () {
+                chat(peer).then(() => {
                     console.log('nothing to do, now...');
                     shutdown();
-                }, function (error) {
+                }, error => {
                     console.log('chat error: ', error.stack);
                     shutdown();
                 });
@@ -96,12 +89,12 @@ function home() {
                 console.log('nothing to do, now...');
                 shutdown();
             }
-        }, function (error) {
+        }, error => {
             console.log('selectChat error: ', error.stack);
             shutdown();
         });
 
-    }, function (error) {
+    }, error => {
         console.log('update-emitter error: ', error.stack);
         shutdown();
     });
@@ -113,14 +106,9 @@ function shutdown() {
     Updates.getInstance().stop();
 }
 
-// clear the term
-function clearTerminal() {
-    process.stdout.write('\033c');
-}
-
 // get the application signature
 function getSignature() {
-    return (' T E R M G R A M '.bold + ' ' + require('./package.json').version ).cyan;
+    return ('T E R M G R A M by Perkovec'.bold + ' ' + require('./package.json').version ).cyan;
 }
 
 // run
