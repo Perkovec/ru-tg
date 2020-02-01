@@ -19,7 +19,7 @@
     "url": "https://github.com/enricostara/termgram/issues"
   },
   "dependencies": {
-    "colors": "latest",
+    "colors": "1.4.0",
     "mute-stream": "latest",
     "requirish": "latest",
     "get-log": "latest"
