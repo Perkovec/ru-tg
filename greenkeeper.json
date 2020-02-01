@@ -1,0 +1,12 @@
+{
+  "groups": {
+    "default": {
+      "packages": [
+        "package.json",
+        "telegram-mt-node/package.json",
+        "telegram-tl-node/package.json",
+        "telegram.link/package.json"
+      ]
+    }
+  }
+}
