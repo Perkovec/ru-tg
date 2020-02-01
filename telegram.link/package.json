@@ -20,24 +20,24 @@
     "get-flow": "latest",
     "get-log": "latest",
     "requirish": "latest",
-    "colors": "1.1.2",
-    "es6-promise": "2.3.0"
+    "colors": "1.4.0",
+    "es6-promise": "4.2.8"
   },
   "license": "MIT",
   "devDependencies": {
-    "gulp": "3.9.0",
-    "gulp-jshint": "1.11.2",
-    "gulp-mocha": "2.1.3",
+    "gulp": "4.0.2",
+    "gulp-jshint": "2.1.0",
+    "gulp-mocha": "7.0.2",
     "gulp-docco": "0.0.4",
-    "del": "1.2.0",
-    "should": "7.0.2",
-    "mocha": "2.2.5",
-    "mocha-better-spec-reporter": "1.1.2",
-    "mocha-lcov-reporter": "0.0.2",
-    "coveralls": "2.11.3",
-    "codeclimate-test-reporter": "0.1.0",
-    "istanbul": "0.3.17",
-    "zuul": "1.15.2"
+    "del": "5.1.0",
+    "should": "13.2.3",
+    "mocha": "7.0.1",
+    "mocha-better-spec-reporter": "3.1.0",
+    "mocha-lcov-reporter": "1.3.0",
+    "coveralls": "3.0.9",
+    "codeclimate-test-reporter": "0.5.1",
+    "istanbul": "0.4.5",
+    "zuul": "3.12.0"
   },
   "main": "./lib/telegram.link",
   "engines": {
